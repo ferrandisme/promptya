@@ -18,6 +18,7 @@ const handler = NextAuth({
     },
     async signIn({ profile }) {
       try {
+        //lambda function, stop after ending. needs each time to connect
         await connectToDB();
 
         //Check if a user alreadyExists
