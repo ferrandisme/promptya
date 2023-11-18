@@ -9,7 +9,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
       </h1>
       <p className="desc text-left max-w-md">
         {type} and share amazing prompts with the world. Share the best prompts
-        for any AI tool
+        for any AI tool.
       </p>
       <form
         onSubmit={handleSubmit}
@@ -32,7 +32,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             Tag {` `}
           </span>
           <span className="font-normal">
-            (#product, #development, #health, #business, #fun, #education, ...)
+            (product, development, health, business, fun, education, ...)
           </span>
           <input
             value={post.tag}
