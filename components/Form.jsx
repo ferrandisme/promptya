@@ -36,7 +36,13 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           </span>
           <input
             value={post.tag}
-            onChange={(e) => setPost({ ...post, tag: e.target.value })}
+            onChange={(e) => {
+              const inputValue = e.target.value;
+              const regex = /^[a-z0-9]*$/;
+              if (regex.test(inputValue)) {
+                setPost({ ...post, tag: inputValue });
+              }
+            }}
             placeholder="Tag"
             required
             className="form_input"
