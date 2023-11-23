@@ -38,9 +38,9 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             value={post.tag}
             onChange={(e) => {
               const inputValue = e.target.value;
-              const regex = /^[a-z0-9]*$/;
+              const regex = /^[a-zA-Z0-9]{0,30}/;
               if (regex.test(inputValue)) {
-                setPost({ ...post, tag: inputValue });
+                setPost({ ...post, tag: inputValue.toLowerCase() });
               }
             }}
             placeholder="Tag"
