@@ -1,9 +1,7 @@
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt";
-import { revalidateTag } from "next/cache";
 
 export const POST = async (req) => {
-  revalidateTag("prompts");
   const { userId, prompt, tag } = await req.json();
   try {
     //lambda function, stop after ending. needs each time to connect
