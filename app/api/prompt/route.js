@@ -6,9 +6,8 @@ export const GET = async (request) => {
     //lambda function, stop after ending. needs each time to connect
     await connectToDB();
 
-    const prompts = await Prompt.find({}).populate("creator");
+    const prompts = await Prompt.find().populate("creator");
 
-    console.log(prompts);
     return new Response(JSON.stringify(prompts), { status: 200 });
   } catch (error) {
     return new Response("Failed to fetch all prompts", { status: 500 });
