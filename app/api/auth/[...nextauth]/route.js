@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { connectToDB } from "@utils/database";
 import User from "@models/user";
 
+export const revalidate = 1;
 const handler = NextAuth({
   providers: [
     GoogleProvider({
