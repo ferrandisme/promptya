@@ -6,7 +6,7 @@ export const GET = async (request) => {
     //lambda function, stop after ending. needs each time to connect
     await connectToDB();
 
-    const prompts = await Prompt.find().populate("creator");
+    const prompts = await Prompt.find({}).populate("creator");
 
     return new Response(JSON.stringify(prompts), { status: 200 });
   } catch (error) {

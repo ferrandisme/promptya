@@ -1,5 +1,6 @@
 import Prompt from "@models/prompt";
 import { connectToDB } from "@utils/database";
+import { revalidateTag } from "next/cache";
 
 export const GET = async (request, { params }) => {
   try {
@@ -16,6 +17,7 @@ export const GET = async (request, { params }) => {
 };
 
 export const PATCH = async (request, { params }) => {
+  revalidateTag("prompts");
   const { prompt, tag } = await request.json();
 
   try {
@@ -42,6 +44,7 @@ export const PATCH = async (request, { params }) => {
 };
 
 export const DELETE = async (request, { params }) => {
+  revalidateTag("prompts");
   try {
     await connectToDB();
 
