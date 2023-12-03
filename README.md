@@ -1,6 +1,6 @@
-# PromptYa v1.0.1
+# PromptYa v1.0.2
 
-PromptYa is a FullStack project created with NextJS.
+PromptYa is a FullStack project created with NextJS. It uses MongoDB for storage.
 
 Developed by [Adrian Ferrandis](https://ferrandis.me).
 
