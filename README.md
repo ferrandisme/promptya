@@ -1,9 +1,18 @@
-PromptYa is a FullStack project created with NextJS
+# PromptYa v1.0.1
 
-In PromptYa you are able to:
+PromptYa is a FullStack project created with NextJS.
 
-- Create account (Google integration)
-- Create/Delete/Edit Prompts
-- Filter Prompts by tag, user, description, ...
-- See other profiles
-And more!
+Developed by [Adrian Ferrandis](https://ferrandis.me).
+
+Explore the deployed application: [PromptYa on Vercel](https://promptya.vercel.app/)
+
+## Features
+
+With PromptYa, you can:
+
+- Create an account (Google integration)
+- Create, delete, and edit prompts
+- Filter prompts by tags, users, descriptions, and more
+- Explore other user profiles
+
+And much more!
