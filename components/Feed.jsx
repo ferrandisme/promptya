@@ -24,14 +24,15 @@ const Feed = () => {
 
   const [allPosts, setAllPosts] = useState([]);
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      const response = await fetch("/api/prompt");
-      const data = await response.json();
-      setAllPosts(data);
-    };
+  const fetchPosts = async () => {
+    const response = await fetch("/api/prompt");
+    const data = await response.json();
 
-    fetchPost();
+    setAllPosts(data);
+  };
+
+  useEffect(() => {
+    fetchPosts();
   }, []);
 
   const filterPrompts = (searchText) => {

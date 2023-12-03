@@ -1,4 +1,5 @@
 import Feed from "@components/Feed";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -10,7 +11,13 @@ const Home = () => {
       </h1>
       <p className="desc text-center">
         PromptYa is a modern AI prompting tool. You can create, share, and find
-        a lot of creative prompts. It's 100% free.
+        a lot of creative prompts. It's 100% free.{" "}
+        <Link
+          href="https://github.com/ferrandisme/promptya"
+          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        >
+          Check Github repository
+        </Link>
       </p>
       <Feed />
     </section>
