@@ -1,4 +1,4 @@
-# PromptYa v1.0.2
+# PromptYa v1.0.3
 
 PromptYa is a FullStack project created with NextJS. It uses MongoDB for storage.
 
@@ -14,5 +14,6 @@ With PromptYa, you can:
 - Create, delete, and edit prompts
 - Filter prompts by tags, users, descriptions, and more
 - Explore other user profiles
+- Data anylisis in vercel
 
 And much more!
