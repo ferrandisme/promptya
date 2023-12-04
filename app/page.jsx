@@ -1,7 +1,10 @@
 import Feed from "@components/Feed";
 import Link from "next/link";
+import { connectToDB } from "@utils/database";
 
-const Home = () => {
+const Home = async () => {
+  //This is need. First case if we don't have this, BD connection is not build.
+  await connectToDB();
   return (
     <section className="w-full flex-center flex-col">
       <h1 className="head_text text-center">
