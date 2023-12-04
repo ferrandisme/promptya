@@ -21,6 +21,8 @@ const Feed = () => {
     fetchPosts();
   }, []);
 
+  fetchPosts();
+
   const filterPrompts = (searchText) => {
     const regex = new RegExp(searchText, "i"); // 'i' = case-insensitive search
     return allPosts.filter(
