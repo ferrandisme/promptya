@@ -1,5 +1,7 @@
 "use client";
 
+export const revalidate = 0;
+
 import { useState, useEffect } from "react";
 import PromptCardList from "./PromptCardList";
 
@@ -20,8 +22,6 @@ const Feed = () => {
   useEffect(() => {
     fetchPosts();
   }, []);
-
-  fetchPosts();
 
   const filterPrompts = (searchText) => {
     const regex = new RegExp(searchText, "i"); // 'i' = case-insensitive search
